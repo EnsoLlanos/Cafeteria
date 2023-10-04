@@ -15,5 +15,23 @@
   "bugs": {
     "url": "https://github.com/EnsoLlanos/Cafeteria/issues"
   },
-  "homepage": "https://github.com/EnsoLlanos/Cafeteria#readme"
+  "homepage": "https://github.com/EnsoLlanos/Cafeteria#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.31",
+    "sass": "^1.68.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-webp": "^4.0.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
 }
