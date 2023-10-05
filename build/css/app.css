@@ -366,7 +366,25 @@ h3 {
 }
 
 .header {
-  color: back;
+  padding: 5rem 0;
+  position: relative;
+}
+.header::before {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 60;
+}
+.header .contenido-header {
+  position: relative;
+}
+
+.header-inicio {
+  background-image: url(../img/header_inicio.jpg);
 }
 
 .navegacion {
