@@ -1,3 +1,12 @@
-.navegacion{
-    color: black;
+@use 'base/mixins' as m;
+.nav-principal{
+    display: flex;
+    flex-direction: column;
+    @include m.tablet { 
+        flex-direction: row;
+    } 
+
+    a{
+        text-align: center;
+    }
 }
