@@ -1,17 +1,22 @@
 const { src, dest, watch,series } = require('gulp'); 
 const sass =  require('gulp-sass')(require('sass')); 
 const plumber = require('gulp-plumber'); 
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 //imagenes
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
+const postcss = require('postcss');
  
 function css(done) {     
-    src('src/scss/**/*.scss')   // identificar el archivos de SASS         
+    src('src/scss/**/*.scss')   // identificar el archivos de SASS 
+        .pipe(sourcemaps.init()) // Iniciar el proceso de sourcemaps        
         .pipe(plumber())         
-        .pipe(sass()) // Compilarlo         
+        .pipe(sass()) // Compilarlo
+        .pipe(sourcemaps.write('.')) // Escribir los sourcemaps en el mismo directorio que el CSS        
         .pipe(dest("build/css"))  // Almacenar en el disco duro     
     done(); // callback que avisa a gulp cuando lleguemos al final 
 } 
